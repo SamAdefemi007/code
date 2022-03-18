@@ -1,0 +1,42 @@
+{% extends 'movie_show/base.html' %}
+{% block  content %}
+   
+    <section>
+
+        <div id="card">
+                {% for item in page_obj %}
+                <div id="each">
+                    <a href="{{item.ratings.link}}"><img src="{{item.poster}}" alt=""></a>
+                    <p>{{ item.title|upper }} --Ratings: {{item.ratings.rating}}<br></p>
+                    <p></p>
+
+                </div>
+                
+    
+                {% endfor %}
+        </div>
+
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    {% endif %}
+            
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+            
+                    {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+       
+
+</section>
+    
+
+
+    {% endblock %}

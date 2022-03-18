@@ -1,0 +1,71 @@
+body {
+  background-color: #e5e3c9;
+  padding: 0;
+  margin: 0;
+  max-width: 1020px;
+  margin: auto;
+}
+nav {
+  padding: 20px;
+  background-color: #789395;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+}
+nav ul li,
+nav ul {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e5e3c9;
+}
+
+nav ul li {
+  margin-right: 20px;
+  padding: 5px;
+}
+
+nav ul li:hover,
+#login-btn:hover {
+  background-color: white;
+}
+
+#login-btn {
+  list-style-type: none;
+  border: 1px solid #94b49f;
+  padding: 5px;
+}
+
+#card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+#each {
+  padding: 5px;
+  width: 20%;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+#each img {
+  width: 200px;
+  height: 200px;
+}
+
+.pagination {
+  margin-top: 20px;
+  font-size: large;
+  text-align: center;
+  margin-bottom: 50px;
+  border: 1px solid #789395;
+  padding: 10px;
+}
+
+.step-links {
+  margin-right: 5px;
+}
